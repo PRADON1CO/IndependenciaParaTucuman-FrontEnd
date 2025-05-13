@@ -1,0 +1,23 @@
+{
+    "personas": [
+      {
+        "id": "a1b2c3d4",  
+        "nombreYapellido": "Carlos López",
+        "DNI": "12345678",
+        "nombreDelPadre": "José López",
+        "nombreDeLaMadre": "María Pérez",
+        "matricula": "MAT-001",
+        "imagen": "https://via.placeholder.com/150"
+      },
+      {
+        "id": "e5f6g7h8",
+        "nombreYapellido": "Laura Gómez",
+        "DNI": "87654321",
+        "nombreDelPadre": "Juan Gómez",
+        "nombreDeLaMadre": "Lucía Fernández",
+        "matricula": "MAT-002",
+        "imagen": "https://via.placeholder.com/150"
+      }
+    ]
+  }
+  
