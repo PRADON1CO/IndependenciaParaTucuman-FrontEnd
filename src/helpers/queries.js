@@ -1,5 +1,5 @@
 
-export const listarClases = async ()=> {
+export const listarPrsonas = async ()=> {
     try{
         const respuesta = await fetch ('http://localhost:3000/personas');
         return respuesta;
@@ -9,14 +9,14 @@ export const listarClases = async ()=> {
 }
 
 
-export const crearClase = async(claseNueva)=>{
+export const crearPersona = async(personaNueva)=>{
     try{
         const respuesta = await fetch ('http://localhost:3000/personas',{
             method: "POST",
             headers:{
                 "Content-Type":"application/json"
             },
-            body: JSON.stringify(claseNueva)
+            body: JSON.stringify(personaNueva)
         });
         return respuesta;
     }catch(error){

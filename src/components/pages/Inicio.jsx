@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
+
+
 const Inicio = () => {
+
+  const [personas, setPersonas] = useState([]);
+
+  useEffect(() =>{
+    optenerPersonas();
+
+  }, [])
+
+  const optenerPersonas = ()=>{
+
+  }
 
   const {
     register,
