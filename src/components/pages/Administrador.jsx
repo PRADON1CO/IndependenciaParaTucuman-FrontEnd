@@ -1,6 +1,8 @@
 import React from 'react'
 import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import ItemPersona from '../personas/ItemPersona';
+import  '../../style/administrador.css'
 
 const Administrador = () => {
   return (
@@ -9,7 +11,7 @@ const Administrador = () => {
         <div className="">
           <section className="container mainSection ">
             <div className="d-flex justify-content-between align-items-center mt-5">
-              <h1 className="text-black display-5 fw-bold ">Gestionar Productos</h1>
+              <h1 className="text-black display-5 fw-bold ">Gestionar Adheridos</h1>
               <Link className="btn bgVerde" to={"/administrador/formulario"}>
                 <i className="bi bi-file-earmark-plus fs-4"></i>
               </Link>
@@ -27,12 +29,9 @@ const Administrador = () => {
                 </tr>
               </thead>
               <tbody>
-                {/* <ItemRemera></ItemRemera>
-                <ItemRemera></ItemRemera>
-                <ItemRemera></ItemRemera>
-                <ItemRemera></ItemRemera>
-                <ItemRemera></ItemRemera> */}
-
+                <ItemPersona></ItemPersona>
+                <ItemPersona></ItemPersona>
+                <ItemPersona></ItemPersona>
               </tbody>
             </Table>
           </section>

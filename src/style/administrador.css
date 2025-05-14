@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+h1{
+     font-family: "Bebas Neue", sans-serif !important;
+    font-weight: 400;
+}
+
+*{
+    /* font-family: "Oswald", sans-serif; */
+   
+
+}
+
+.imgAdministrador{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+
+}
+
+.btnOpciones{
+    border: 1px solid black;
+}
+
+.btnOpciones:hover{
+    color: white;
+    background-color: black;
+}
