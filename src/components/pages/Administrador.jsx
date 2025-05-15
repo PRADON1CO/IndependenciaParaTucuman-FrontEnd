@@ -56,9 +56,7 @@ const Administrador = () => {
                 {
                   personas.map((itemPersona) => <ItemPersona key={itemPersona.id} persona={itemPersona}></ItemPersona>)  
                 }
-                <ItemPersona></ItemPersona>
-                <ItemPersona></ItemPersona>
-                <ItemPersona></ItemPersona>
+                
               </tbody>
             </Table>
           </section>

@@ -133,26 +133,26 @@ const Inicio = () => {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formNombreClase">
-             <Form.Label>Matricula*</Form.Label>
+             <Form.Label>Domicilio*</Form.Label>
              <Form.Control
               type="text"
               placeholder="Ej: "
-              {...register("matricula", {
+              {...register("domicilio", {
                 required: "El nombre de la clase es obligatoria",
                 minLength: {
                   value: 2,
                   message:
-                    "Debe ingresar como minimo 2 caracteres para la matricula",
+                    "Debe ingresar como minimo 2 caracteres para la domicilio",
                 },
                 maxLength: {
                   value: 50,
                   message:
-                    "Debe ingresar como maximo 50 caracteres para la matricula",
+                    "Debe ingresar como maximo 50 caracteres para la domicilio",
                 },
               })}
             />
             <Form.Text className="text-danger">
-              {errors.matricula?.message}
+              {errors.domicilio?.message}
             </Form.Text>
           </Form.Group>
 
