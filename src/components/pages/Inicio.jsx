@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-
+import { crearPersona } from '../../helpers/queries';
 
 
 const Inicio = () => {
@@ -9,12 +9,13 @@ const Inicio = () => {
   const [personas, setPersonas] = useState([]);
 
   useEffect(() =>{
-    optenerPersonas();
+    //personaValida()
 
   }, [])
 
-  const optenerPersonas = ()=>{
-
+  const personaValida = async (persona)=>{
+    const respuesta = await crearPersona(persona);
+    console.log(respuesta);
   }
 
   const {
@@ -25,9 +26,7 @@ const Inicio = () => {
     setValue,
   } = useForm();
 
-  const claseValidado = (data) => {
-    console.log(data);
-  };
+  
 
 
   return (
@@ -35,7 +34,7 @@ const Inicio = () => {
        <div className="container ">
         <h1 className=" mt-5">Adhision Al Partido Politico</h1>
         <hr />
-        <Form className="my-4" onSubmit={handleSubmit(claseValidado)}>
+        <Form className="my-4" onSubmit={handleSubmit(personaValida)}>
         <Form.Group className="mb-3" controlId="formNombreClase">
              <Form.Label>Nombre y Apellido*</Form.Label>
              <Form.Control
