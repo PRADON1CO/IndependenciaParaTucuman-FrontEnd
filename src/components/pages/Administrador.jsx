@@ -1,10 +1,34 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemPersona from '../personas/ItemPersona';
 import  '../../style/administrador.css'
+import { useState } from 'react';
+import { listarPrsonas } from '../../helpers/queries';
+
 
 const Administrador = () => {
+
+  const [personas, setPersonas] = useState([]);
+  
+    useEffect(() =>{
+      optenerPersonas();
+  
+    }, [])
+  
+    const optenerPersonas = async()=>{
+      const respuesta = await listarPrsonas()
+      if(respuesta.status === 200){
+        //guardo las personas en el state
+        const datos = await respuesta.json();
+        setPersonas();
+      }else{
+        //Crear un mensaje de aviso de error que en este momento no se puede realizar operaciones
+      }
+      
+    }
+  
+
   return (
     <div className='mainSection'>
       <div>
