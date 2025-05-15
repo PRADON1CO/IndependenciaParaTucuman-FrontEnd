@@ -21,7 +21,7 @@ const Administrador = () => {
       if(respuesta.status === 200){
         //guardo las personas en el state
         const datos = await respuesta.json();
-        setPersonas();
+        setPersonas(datos);
       }else{
         //Crear un mensaje de aviso de error que en este momento no se puede realizar operaciones
       }
@@ -53,6 +53,9 @@ const Administrador = () => {
                 </tr>
               </thead>
               <tbody>
+                {
+                  personas.map((itemPersona) => <ItemPersona key={itemPersona.id} persona={itemPersona}></ItemPersona>)  
+                }
                 <ItemPersona></ItemPersona>
                 <ItemPersona></ItemPersona>
                 <ItemPersona></ItemPersona>

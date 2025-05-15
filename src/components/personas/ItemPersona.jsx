@@ -1,6 +1,7 @@
 import React from 'react'
 
-const ItemPersona = () => {
+const ItemPersona = ({persona}) => {
+  
   return (
      <tr>
       <td className="text-center">123</td>
